@@ -1,43 +1,46 @@
 .container {
-	display: flex;
-	justify-content: space-around;
-	margin-top: 50px;
+	margin: 30px auto;
+	max-width: 1200px;
+	padding: 0 15px;
 }
 .bounce {
 	background-color: black;
 	color: white;
 	padding: 30px;
-	max-height: 280px;
+	min-height: 300px;
 	overflow: hidden;
 	border-radius: 10px;
-	width: 20%;
+	width: 90%;
+}
+.bounce h1 {
+	color: white;
 }
 .fangible {
 	background-color: #ae6fff;
 	color: black;
 	padding: 30px;
-	max-height: 280px;
+	min-height: 300px;
 	overflow: hidden;
 	border-radius: 10px;
-	width: 20%;
+	width: 90%;
 }
 .bouncepolk {
 	background-color: #ff699f;
 	color: black;
 	padding: 30px;
-	max-height: 280px;
+	min-height: 300px;
 	overflow: hidden;
 	border-radius: 10px;
-	width: 20%;
+	width: 90%;
 }
 .bounceTool {
 	background-color: #f4eda8;
 	color: black;
 	padding: 30px;
-	max-height: 280px;
+	min-height: 300px;
 	overflow: hidden;
 	border-radius: 10px;
-	width: 20%;
+	width: 90%;
 }
 .bounce svg,
 .fangible svg,
@@ -46,37 +49,70 @@
 	width: 30px;
 }
 .bounce .card {
-	margin-top: 90px;
+	transform: translateY(160px);
+}
+.bounce:hover .card {
+	transition: all 0.5s ease-out;
+	transform: translateY(60px);
 }
 .fangible .card {
-	margin-top: 135px;
+	transform: translateY(170px);
+}
+.fangible:hover .card {
+	transition: all 0.5s ease-out;
+	transform: translateY(70px);
 }
 .bouncepolk .card {
-	margin-top: 120px;
+	transform: translateY(150px);
+}
+.bouncepolk:hover .card {
+	transition: all 0.5s ease-out;
+	transform: translateY(50px);
 }
 .bounceTool .card {
-	margin-top: 95px;
+	transform: translateY(170px);
 }
-.bounce .card button {
-	border-radius: 10px;
-	padding: 10px;
-}
-.fangible .card button {
-	border-radius: 10px;
-	padding: 10px;
-}
-.bouncepolk .card button {
-	border-radius: 10px;
-	padding: 10px;
-}
-.bounceTool .card button {
-	border-radius: 10px;
-	padding: 10px;
-}
-.bounce:hover .card,
-.fangible:hover .card,
-.bouncepolk:hover .card,
 .bounceTool:hover .card {
-	transition-delay: 0.3s;
-	margin-top: 0px;
+	transition: all 0.5s ease-out;
+	transform: translateY(70px);
+}
+.cardContent a {
+	text-decoration: none;
+	color: black;
+	position: relative;
+	border: 1px solid black;
+	border-radius: 32px;
+	padding: 13px;
+	background-color: white;
+	border: none;
+	overflow: hidden;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.cardContent a:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: black;
+	border-radius: 30px;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+	transition: all 0.5s ease;
+	color: white;
+}
+.cardContent a:hover:before {
+	transform: translateY(0);
+}
+.cardContent a span {
+	position: relative;
+}
+.cardContent a:hover span {
+	color: white;
+}
+.cardSVG {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
